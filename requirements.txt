@@ -1,0 +1,17 @@
+# Instala o pacote Whisper diretamente do repositório do GitHub
+git+https://github.com/openai/whisper.git
+
+# Dependências obrigatórias
+click>=8.0.0         # Para a interface de linha de comando
+numpy>=1.18.5       # Operações com arrays e cálculos numéricos
+torch>=1.7.0        # Framework para computação com suporte a GPUs (o Whisper utiliza o PyTorch)
+torchaudio>=0.7.0   # Processamento e manipulação de áudio com PyTorch
+tqdm>=4.0.0         # Barras de progresso para monitoramento do processamento
+
+# Dependência opcional para facilitar integração com o FFmpeg via Python
+ffmpeg-python>=0.2.0
+
+
+# Embora o pacote ffmpeg-python permita a interação por meio do Python, o FFmpeg em si precisa estar instalado e disponível no seu PATH. Dependendo da sua plataforma, a instalação pode variar (por exemplo, através do gerenciador de pacotes do sistema ou pelo download direto do site oficial).
+
+#Se você pretende usar aceleração via GPU, garanta que a versão do Torch instalada é compatível com a versão do CUDA que você tem no seu sistema. Caso contrário, o pip instalará a versão CPU-only do PyTorch.
